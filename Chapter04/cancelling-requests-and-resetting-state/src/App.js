@@ -3,7 +3,7 @@ import User from "./User";
 
 const ShowHideUser = ({ show }) => (show ? <User /> : null);
 
-export default function App() {
+function App() {
   const [show, setShow] = React.useState(false);
 
   return (
@@ -15,3 +15,5 @@ export default function App() {
     </>
   );
 }
+
+export default App;
