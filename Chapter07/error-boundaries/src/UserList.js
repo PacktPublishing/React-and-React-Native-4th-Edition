@@ -16,4 +16,4 @@ function UserList({ error, loading, users }) {
   );
 }
 
-export default LoadingMessage;
+export default UserList;
