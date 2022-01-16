@@ -1,11 +1,16 @@
-import React from "react";
-import { render } from "react-dom";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import UsersContainer from "./UsersContainer";
 
-render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <Router>
-    <Route path="/users/:desc?" component={UsersContainer} />
-  </Router>,
-  document.getElementById("root")
+    <Routes>
+      <Route path="/users">
+        <Route path=":desc" element={<UsersContainer />} />
+        <Route path="" element={<UsersContainer />} />
+      </Route>
+    </Routes>
+  </Router>
 );

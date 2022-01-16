@@ -9,7 +9,7 @@ const Error = ({ error }) =>
   ) : null;
 const Text = ({ children }) => (children ? <p>{children}</p> : null);
 
-export default function User({ error, first, last, age }) {
+function User({ error, first, last, age }) {
   return (
     <section>
       <Error error={error} />
@@ -24,5 +24,7 @@ User.propTypes = {
   error: PropTypes.string,
   first: PropTypes.string,
   last: PropTypes.string,
-  age: PropTypes.number
+  age: PropTypes.number,
 };
+
+export default User;

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export default function Users({ users }) {
+function Users({ users }) {
   return (
     <ul>
       {users.map((user, id) => (
@@ -15,5 +15,7 @@ export default function Users({ users }) {
 }
 
 Users.propTypes = {
-  users: PropTypes.array
+  users: PropTypes.array,
 };
+
+export default Users;

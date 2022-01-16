@@ -12,7 +12,6 @@ function Layout() {
           <Link to="second">Second</Link>
         </p>
       </nav>
-      g
       <main>
         <Outlet />
       </main>

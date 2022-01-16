@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
+import { useParams, useSearchParams } from "react-router-dom";
 import Users from "./Users";
 import { fetchUsers } from "./api";
 
-export default function UsersContainer({
-  match: { params },
-  location: { search }
-}) {
+function UsersContainer() {
   const [users, setUsers] = useState([]);
+  const params = useParams();
+  const [search] = useSearchParams();
+
+  console.log(params);
+  console.log(search);
 
   useEffect(() => {
-    const desc =
-      params.desc === "desc" || !!new URLSearchParams(search).get("desc");
+    const desc = params.desc === "desc" || !!search.get("desc");
 
-    fetchUsers(desc).then(users => {
+    fetchUsers(desc).then((users) => {
       setUsers(users);
     });
   }, [params, search]);
@@ -21,7 +22,4 @@ export default function UsersContainer({
   return <Users users={users} />;
 }
 
-UsersContainer.propTypes = {
-  match: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired
-};
+export default UsersContainer;

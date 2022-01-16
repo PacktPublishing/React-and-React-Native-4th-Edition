@@ -1,10 +1,10 @@
-import React from "react";
+import * as React from "react";
 import PropTypes from "prop-types";
 
-export default function Users({ users }) {
+function Users({ users }) {
   return (
     <ul>
-      {users.map(user => (
+      {users.map((user) => (
         <li key={user}>{user}</li>
       ))}
     </ul>
@@ -12,5 +12,7 @@ export default function Users({ users }) {
 }
 
 Users.propTypes = {
-  users: PropTypes.array.isRequired
+  users: PropTypes.array.isRequired,
 };
+
+export default Users;

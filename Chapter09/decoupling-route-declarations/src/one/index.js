@@ -1,14 +1,15 @@
-import React, { Fragment } from "react";
-import { Route, Redirect } from "react-router";
+import * as React from "react";
+import { Route, Outlet } from "react-router-dom";
+import Redirect from "../Redirect";
 import First from "./First";
 import Second from "./Second";
 
-export default function One() {
-  return (
-    <Fragment>
-      <Route exact path="/one" render={() => <Redirect to="/one/1" />} />
-      <Route exact path="/one/1" component={First} />
-      <Route exact path="/one/2" component={Second} />
-    </Fragment>
-  );
-}
+const routes = (
+  <Route path="/one" element={<Outlet />}>
+    <Route index element={<Redirect path="/one/1" />} />
+    <Route path="/one/1" element={<First />} />
+    <Route path="/one/2" element={<Second />} />
+  </Route>
+);
+
+export default routes;

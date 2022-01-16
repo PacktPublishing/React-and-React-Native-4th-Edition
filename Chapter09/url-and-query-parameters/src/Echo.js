@@ -1,9 +1,11 @@
 import React from "react";
-import { withRouter } from "react-router";
+import { useParams, useSearchParams } from "react-router-dom";
 
-export default withRouter(function Echo({
-  match: { params },
-  location: { search }
-}) {
-  return <h1>{params.msg || new URLSearchParams(search).get("msg")}</h1>;
-});
+function Echo() {
+  const params = useParams();
+  const [searchParams] = useSearchParams();
+  console.log(searchParams);
+  return <h1>{params.msg || searchParams.get("msg")}</h1>;
+}
+
+export default Echo;

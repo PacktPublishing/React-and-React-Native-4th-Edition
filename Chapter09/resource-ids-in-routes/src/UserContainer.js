@@ -1,38 +1,33 @@
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
+import { useParams } from "react-router-dom";
 import User from "./User";
 import { fetchUser } from "./api";
 
-export default function UserContainer({
-  match: {
-    params: { id }
-  }
-}) {
+function UserContainer() {
+  const params = useParams();
   const [error, setError] = useState();
   const [first, setFirst] = useState();
   const [last, setLast] = useState();
   const [age, setAge] = useState();
 
   useEffect(() => {
-    fetchUser(+id).then(
-      user => {
+    fetchUser(Number(params.id)).then(
+      (user) => {
         setError(null);
         setFirst(user.first);
         setLast(user.last);
         setAge(user.age);
       },
-      error => {
+      (error) => {
         setError(error);
         setFirst(null);
         setLast(null);
         setAge(null);
       }
     );
-  }, [id]);
+  }, [params.id]);
 
   return <User {...{ error, first, last, age }} />;
 }
 
-UserContainer.propTypes = {
-  match: PropTypes.object.isRequired
-};
+export default UserContainer;

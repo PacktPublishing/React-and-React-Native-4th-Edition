@@ -1,11 +1,14 @@
-import React from "react";
-import { render } from "react-dom";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MyComponent from "./MyComponent";
 
-render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
   <Router>
-    <Route exact path="/" component={MyComponent} />
-  </Router>,
-  document.getElementById("root")
+    <Routes>
+      <Route path="/" element={<MyComponent />} />
+    </Routes>
+  </Router>
 );
