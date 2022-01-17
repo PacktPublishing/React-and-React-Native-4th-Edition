@@ -8,9 +8,6 @@ function UsersContainer() {
   const params = useParams();
   const [search] = useSearchParams();
 
-  console.log(params);
-  console.log(search);
-
   useEffect(() => {
     const desc = params.desc === "desc" || !!search.get("desc");
 

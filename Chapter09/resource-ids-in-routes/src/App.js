@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UsersContainer from "./UsersContainer";
 import UserContainer from "./UserContainer";
