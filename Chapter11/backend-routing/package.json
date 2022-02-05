@@ -1,0 +1,24 @@
+{
+  "name": "third-edition",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.0.0-rc.0-next-2ed58eb88-20220126",
+    "react-dom": "^18.0.0-rc.0-next-2ed58eb88-20220126",
+    "react-router": "^6.2.1",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "^3.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "server": "babel-node src/server.js"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4"
+  }
+}
