@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import TodoApp from './components/TodoApp';
@@ -14,7 +13,6 @@ const client = new ApolloClient({
 export default function App() {
   return (
     <ApolloProvider client={client}>
-      <StatusBar style='auto' />
       <TodoApp />
     </ApolloProvider>
   );
