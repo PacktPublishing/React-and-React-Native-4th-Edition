@@ -1,4 +1,4 @@
-import { createContext, useMemo, useReducer } from 'react';
+import { createContext, useCallback, useMemo, useReducer } from 'react';
 
 export const ArticlesContext = createContext();
 
@@ -80,17 +80,15 @@ export const ArticlesContextProvider = ({ children }) => {
     }
   }
 
-  function filterArticles(filter) {
+  const filterArticles = useCallback(async (filter) => {
     dispatch({ type: 'SET_ARTICLES_FILTER', payload: filter });
 
     fetchArticles(filter);
-  }
+  }, []);
 
   const value = useMemo(
     () => ({ ...state, fetchArticles, fetchSingleArticle, filterArticles }),
-    // The filterArticles function must be excluded to prevent unwanted re-renders
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [state],
+    [filterArticles, state],
   );
 
   return (

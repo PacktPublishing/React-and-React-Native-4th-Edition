@@ -19,9 +19,6 @@ const categories = ['local', 'global', 'tech', 'sports'];
 function Filter() {
   const { filter, filterArticles } = useContext(ArticlesContext);
 
-console.log(' filter rerenders');
-
-
   return (
     <ul style={categoryListStyle}>
       <li style={categoryItemStyle}>Filter:</li>
