@@ -15,7 +15,14 @@ myUser.current.setState({
   last: "Last1",
 });
 
-myUser.current.setState({
-  first: "First2",
-  last: "Last2",
-});
+// The setTimeout() is used here to avoid batched state updates, for demonstration
+// purposes. In a real app, the setState() call would happen in response to some user
+// event or the arrival of new data from the network, in which case batched state
+// updates wouldn't matter but we would still want to check the modified value
+// to see if it makes sense to re-render the component.
+setTimeout(() => {
+  myUser.current.setState({
+    first: "First2",
+    last: "Last2",
+  });
+}, 1000);

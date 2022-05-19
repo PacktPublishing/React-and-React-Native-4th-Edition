@@ -15,7 +15,7 @@ function User() {
   const [id, setId] = React.useState("loading...");
   const [name, setName] = React.useState("loading...");
 
-  useEffect(() => {
+  React.useEffect(() => {
     const promise = fetchUser().then((user) => {
       setId(user.id);
       setName(user.name);
