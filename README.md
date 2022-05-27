@@ -1,8 +1,8 @@
-# React and React Native
+# React and React Native - Fourth Edition
 
 <a href="https://www.packtpub.com/product/react-and-react-native-fourth-edition/9781803231280"><img src="https://static.packt-cdn.com/products/9781803231280/cover/smaller" alt="React and React Native - Fourth Edition" height="256px" align="right"></a>
 
-This is the code repository for [React and React Native](https://www.packtpub.com/product/react-and-react-native-fourth-edition/9781803231280), published by Packt.
+This is the code repository for [React and React Native - Fourth Edition](https://www.packtpub.com/product/react-and-react-native-fourth-edition/9781803231280), published by Packt.
 
 **Build cross-platform JavaScript applications with native power for the web, desktop, and mobile**
 
