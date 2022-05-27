@@ -59,8 +59,12 @@ export default function PlottingOverlays() {
       <MapView
         style={styles.mapView}
         showsPointsOfInterest={false}
-        showsUserLocation
-        followUserLocation
+        initialRegion={{
+          latitude: 43.8486744,
+          longitude: -79.0695283,
+          latitudeDelta: 0.002,
+          longitudeDelta: 0.04,
+        }}
       >
         {overlays.map((v, i) => (
           <MapView.Polygon
