@@ -1,50 +1,23 @@
-import { useMutation, useQuery } from '@apollo/client';
-
-import TodoList from './components/TodoList';
-import TodoListFooter from './components/TodoListFooter';
-import TodoTextInput from './components/TodoTextInput';
-import { GET_USER, ADD_TODO } from './constants';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import Filter from './components/Filter';
+import Home from './components/Home';
+import Article from './components/Article';
+import AppContext from './context/AppContext';
 
 function App() {
-  const { loading, error, data } = useQuery(GET_USER, {
-    variables: {
-      userId: 'me', // Mock authenticated ID that matches database
-    },
-  });
-
-  const [addTodo] = useMutation(ADD_TODO, {
-    refetchQueries: [
-      {
-        query: GET_USER,
-        variables: {
-          userId: 'me',
-        },
-      },
-    ],
-  });
-
-  if (loading) return 'Loading...';
-  if (error) return `Error! ${error.message}`;
-
-  const hasTodos = data.user.totalCount > 0;
-
   return (
-    <div>
-      <section className='todoapp'>
-        <header className='header'>
-          <h1>todos</h1>
-
-          <TodoTextInput
-            className='new-todo'
-            onSave={(text) => addTodo({ variables: { text } })}
-            placeholder='What needs to be done?'
-          />
-        </header>
-
-        <TodoList user={data.user} />
-        {hasTodos && <TodoListFooter user={data.user} />}
-      </section>
-    </div>
+    <BrowserRouter>
+      <div>
+        <h1>Hipster news app</h1>
+        <AppContext>
+          <Filter />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route exact path='/articles/:id' element={<Article />} />
+          </Routes>
+        </AppContext>
+      </div>
+    </BrowserRouter>
   );
 }
 

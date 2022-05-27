@@ -3,19 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@apollo/client": "^3.4.16",
-    "classnames": "^2.3.1",
-    "concurrently": "^6.3.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "express-graphql": "^0.12.0",
-    "graphql": "^16.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0-next.47"
+    "concurrently": "6.3.0",
+    "history": "5.1.0",
+    "json-server": "0.17.0",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-router-dom": "6.3.0",
+    "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "concurrently \"node server/index.js\" \"react-scripts start\"",
+    "start": "concurrently \"json-server db.json --port 3001\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
