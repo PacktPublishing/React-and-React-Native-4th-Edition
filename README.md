@@ -58,7 +58,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 * Elevating React Web Development with Gatsby [[Packt]](https://www.packtpub.com/product/elevating-react-web-development-with-gatsby-4/9781800209091) [[Amazon]](https://www.amazon.com/Elevating-React-Web-Development-Gatsby/dp/1800209096)
 
 
-## Get to Know the Author
+## Get to Know the Authors
 
 **Adam Boduch**
 has been involved in large-scale JavaScript development for nearly 15 years. Before moving to the frontend, he worked on several large-scale cloud computing products using Python and Linux. No stranger to complexity, Adam has practical experience with real-world software systems and the scaling challenges they pose.
