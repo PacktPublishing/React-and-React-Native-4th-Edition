@@ -76,3 +76,7 @@ is Software Engineer with high proficiency in JavaScript, React and React Native
 * [Mastering Immutable.js](https://www.packtpub.com/product/web-development/9781788395113)
 * [React Projects](https://www.packtpub.com/product/programming/9781789954937)
 * [jQuery UI Cookbook](https://www.packtpub.com/product/web-development/9781782162186)
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781803231280">https://packt.link/free-ebook/9781803231280 </a> </p>
