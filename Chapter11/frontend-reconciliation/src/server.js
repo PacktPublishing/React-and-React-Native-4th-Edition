@@ -15,7 +15,7 @@ app.get("/*", (req, res) => {
 
   if (context.url) {
     res.writeHead(301, {
-      Location: context.url
+      Location: context.url,
     });
     res.end();
   } else {

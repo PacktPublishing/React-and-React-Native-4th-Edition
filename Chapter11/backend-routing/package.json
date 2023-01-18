@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^18.0.0-rc.0-next-2ed58eb88-20220126",
-    "react-dom": "^18.0.0-rc.0-next-2ed58eb88-20220126",
-    "react-router": "^6.2.1",
-    "react-router-dom": "^6.2.1",
-    "react-scripts": "^3.4.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.6.2",
+    "react-router-dom": "^6.6.2",
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
