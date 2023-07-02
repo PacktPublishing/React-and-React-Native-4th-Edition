@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
 import MyComponent from "./MyComponent";
 import MyUser from "./MyUser";
 
@@ -13,10 +13,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <section>
     <MyComponent myDate={new Date()} myCount={0} myUsers={users} />
-    <MyComponent
-      myDate="6/9/2016"
-      myCount={false}
-      myUsers={[1, 2, 3]}
-    />
+    <MyComponent myDate="6/9/2016" myCount={false} myUsers={[1, 2, 3]} />
   </section>
 );

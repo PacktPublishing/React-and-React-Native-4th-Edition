@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
 import ErrorBoundary from "./ErrorBoundary";
 import UserListContainer from "./UserListContainer";
 

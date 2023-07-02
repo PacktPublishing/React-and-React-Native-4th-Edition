@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
 import ArticleList from "./ArticleList";
 import AddArticle from "./AddArticle";
 import MyFeature from "./MyFeature";
